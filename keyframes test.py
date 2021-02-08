@@ -1,6 +1,6 @@
 ## Keyframing test
 
-import keyframes, interpolate, pygame
+import keyframes, interpolate, pygame, sys
 
 
 screen = pygame.display.set_mode((800, 600))
@@ -30,7 +30,9 @@ class Circle:
 		self.curframe = self.curframe + 1
 	
 	def Draw(self):
-		pygame.draw.circle(self.screen, (self.variables["r"], self.variables["g"], self.variables["b"]), (self.variables["x"], self.variables["y"]), self.variables["rad"])
+		pygame.draw.circle(self.screen,
+				   (int(self.variables["r"]), int(self.variables["g"]), int(self.variables["b"])),
+				   (int(self.variables["x"]), int(self.variables["y"])), int(self.variables["rad"]))
 
 
 circle = Circle((0, 0), (0, 255, 0), 10, screen)

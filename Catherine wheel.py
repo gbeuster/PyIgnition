@@ -9,7 +9,7 @@ clock = pygame.time.Clock()
 
 wheel = PyIgnition.ParticleEffect(screen, (0, 0), (600, 600))
 flame = wheel.CreateSource((300, 300), initspeed = 20.0, initdirection = 0.0, initspeedrandrange = 0.0, initdirectionrandrange = 0.5, particlesperframe = 3, particlelife = 50, drawtype = PyIgnition.DRAWTYPE_SCALELINE, colour = (255, 200, 200), length = 20.0)
-sparks = wheel.CreateSource((300, 300), initspeed = 1.0, initdirection = 0.0, initspeedrandrange = 0.9, initdirectionrandrange = 3.141592653, particlesperframe = 1, particlelife = 300, genspacing = 3, drawtype = PyIgnition.DRAWTYPE_IMAGE, imagepath = "spark.png")
+sparks = wheel.CreateSource((300, 300), initspeed = 1.0, initdirection = 0.0, initspeedrandrange = 0.9, initdirectionrandrange = 3.141592653, particlesperframe = 1, particlelife = 300, genspacing = 3, drawtype = PyIgnition.DRAWTYPE_IMAGE, imagepath = "Spark.png")
 wheel.CreateDirectedGravity(strength = 0.05, direction = [0, 1])
 
 velocity = 0.1

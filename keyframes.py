@@ -12,7 +12,7 @@ def CreateKeyframe(parentframes, frame, variables):
 	
 	# Look for duplicate keyframes and copy other defined variables
 	try:
-		oldkey = (keyframe for keyframe in parentframes if keyframe.frame == frame).next()
+		oldkey = (keyframe for keyframe in parentframes if keyframe.frame == frame).__next__()
 	except StopIteration:
 		oldkey = None
 	

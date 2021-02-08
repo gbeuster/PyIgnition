@@ -15,7 +15,7 @@ def RandomiseStrength(base, range):
 
 class DirectedGravity:
 	def __init__(self, strength = 0.0, strengthrandrange = 0.0, direction = [0, 1]):
-                self.selected = False
+		self.selected = False
 		self.type = "directed"
 		self.initstrength = strength
 		self.strength = strength
@@ -64,7 +64,7 @@ class DirectedGravity:
 
 class PointGravity:
 	def __init__(self, strength = 0.0, strengthrandrange = 0.0, pos = (0, 0)):
-                self.selected = False
+		self.selected = False
 		self.type = "point"
 		self.initstrength = strength
 		self.strength = strength
@@ -150,8 +150,8 @@ class VortexGravity(PointGravity):
 		try:
 			self.alreadyshownerror
 		except:
-			print "WARNING: VortexGravity relies upon particle velocities as well as positions, and so its \
-				force can only be obtained using GetForceOnParticle([PyIgnition particle object]).".replace("\t", "")
+			print ("WARNING: VortexGravity relies upon particle velocities as well as positions, and so its \
+				force can only be obtained using GetForceOnParticle([PyIgnition particle object]).".replace("\t", ""))
 			self.alreadyshownerror = True
 		
 		return [0.0, 0.0]

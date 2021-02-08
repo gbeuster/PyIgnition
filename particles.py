@@ -86,7 +86,7 @@ class Particle:
 		elif self.drawtype == DRAWTYPE_IMAGE:  # Image
 			if self.image != None:
 				size = self.image.get_size()
-                                display.blit(self.image, (offset[0] + int(self.pos[0] - (size[1]* 0.5)), offset[1] + int(self.pos[1] - (size[1] * 0.5))))
+				display.blit(self.image, (offset[0] + int(self.pos[0] - (size[1]* 0.5)), offset[1] + int(self.pos[1] - (size[1] * 0.5))))
 
 	def CreateKeyframe(self, frame, colour = (None, None, None), radius = None, length = None):
 		keyframes.CreateKeyframe(self.keyframes, frame, {'colour_r':colour[0], 'colour_g':colour[1], 'colour_b':colour[2], 'radius':radius, 'length':length})
@@ -94,7 +94,7 @@ class Particle:
 
 class ParticleSource:
 	def __init__(self, parenteffect, pos, initspeed, initdirection, initspeedrandrange, initdirectionrandrange, particlesperframe, particlelife, genspacing, drawtype = 0, colour = (0, 0, 0), radius = 0.0, length = 0.0, imagepath = None):
-                self.selected = False
+		self.selected = False
 		self.parenteffect = parenteffect
 		self.pos = pos
 		self.initspeed = initspeed
@@ -173,7 +173,7 @@ class ParticleSource:
 		else:  # Otherwise, interpolate the particle variables for each frame of its life
 			particlelife = self.particlelife
 		
-		for i in xrange(0, particlelife + 1):
+		for i in range(0, particlelife + 1):
 			vars = interpolate.InterpolateKeyframes(i, {'colour_r':0, 'colour_g':0, 'colour_b':0, 'radius':0, 'length':0}, self.particlekeyframes)
 			self.particlecache.append(vars)
 	

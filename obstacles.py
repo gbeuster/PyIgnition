@@ -35,7 +35,7 @@ def normalise(vec):
 
 class Obstacle:
 	def __init__(self, parenteffect, pos, colour, bounce):
-                self.selected = False
+		self.selected = False
 		self.parenteffect = parenteffect
 		self.pos = pos
 		self.colour = colour

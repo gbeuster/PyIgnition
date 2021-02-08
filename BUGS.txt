@@ -1,0 +1,6 @@
+The following programs throw errors:
+
+Controlled Eruption.py 
+wx test 2.py
+wx test.py
+
